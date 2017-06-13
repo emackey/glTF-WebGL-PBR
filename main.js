@@ -70,20 +70,20 @@ function loadCubeMap(gl, envMap, type, state) {
 }
 
 // Update model from dat.gui change
-function updateModel(value, gl, glState, viewMatrix, projectionMatrix, backBuffer, frontBuffer) {
+function updateModel(modelInfo, gl, glState, viewMatrix, projectionMatrix, backBuffer, frontBuffer) {
     var error = document.getElementById('error');
     glState.scene = null;
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 
     $.ajax({
-        url: 'models/' + value + '/glTF/' + value + '.gltf',
+        url: modelInfo.path + modelInfo.file,
         dataType: 'json',
         async: true,
         error: (jqXhr, textStatus, errorThrown) => {
             error.innerHTML += 'Failed to load model: ' + errorThrown + '<br>';
         },
         success: function(gltf) {
-            var scene = new Scene(gl, glState, "./models/" + value + "/glTF/", gltf);
+            var scene = new Scene(gl, glState, modelInfo.path, gltf);
             scene.projectionMatrix = projectionMatrix;
             scene.viewMatrix = viewMatrix;
             scene.backBuffer = backBuffer;
@@ -111,12 +111,20 @@ function main() {
             error.innerHTML += 'Failed to load the fragment shader: ' + errorThrown + '<br>';
         }
     });
-    $.when(vertDeferred, fragDeferred).then((vertSource, fragSource) => {
-        init(vertSource[0], fragSource[0]);
+    var modelIndexDeferred = $.ajax({
+        url: 'model-index.json',
+        dataType: 'json',
+        async: true,
+        error: (jqXhr, textStatus, errorThrown) => {
+            error.innerHTML += 'Failed to load the model index: ' + errorThrown + '<br>';
+        }
+    });
+    $.when(vertDeferred, fragDeferred, modelIndexDeferred).then((vertSource, fragSource, modelIndex) => {
+        init(vertSource[0], fragSource[0], modelIndex[0]);
     });
 }
 
-function init(vertSource, fragSource) {
+function init(vertSource, fragSource, modelIndex) {
     var canvas = document.getElementById('canvas');
     var canvas2d = document.getElementById('canvas2d');
     var error = document.getElementById('error');
@@ -194,7 +202,7 @@ function init(vertSource, fragSource) {
     glState.uniforms['u_scaleIBLAmbient'] = { 'funcName': 'uniform4f', vals: [1.0, 1.0, 1.0, 1.0] };
 
     // Load scene
-    updateModel("BoomBox", gl, glState, viewMatrix, projectionMatrix, canvas, ctx2d);
+    updateModel(modelIndex.filter(m => m.name === 'BoomBox')[0], gl, glState, viewMatrix, projectionMatrix, canvas, ctx2d);
 
     // Set clear color
     gl.clearColor(0.2, 0.2, 0.2, 1.0);
@@ -229,8 +237,9 @@ function init(vertSource, fragSource) {
 
 
     var text = { Model: "BoomBox" };
-    folder.add(text, 'Model', ['MetalRoughSpheres', 'AppleTree', 'Avocado', 'BarramundiFish', 'BoomBox', 'Corset', 'FarmLandDiorama', 'NormalTangentTest', 'Telephone', 'Triangle', 'WaterBottle']).onChange(function(value) {
-        updateModel(value, gl, glState, viewMatrix, projectionMatrix, canvas, ctx2d);
+    folder.add(text, 'Model', modelIndex.map(m => m.name)).onChange(function(name) {
+        var modelInfo = modelIndex.filter(m => m.name === name)[0];
+        updateModel(modelInfo, gl, glState, viewMatrix, projectionMatrix, canvas, ctx2d);
     });
     folder.open();
 

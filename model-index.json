@@ -1,0 +1,182 @@
+[
+  {
+    "name": "2CylinderEngine",
+    "file": "2CylinderEngine.gltf",
+    "path": "glTF-Sample-Models/2.0/2CylinderEngine/glTF/"
+  },
+  {
+    "name": "AnimatedCube",
+    "file": "AnimatedCube.gltf",
+    "path": "glTF-Sample-Models/2.0/AnimatedCube/glTF/"
+  },
+  {
+    "name": "AnimatedMorphCube",
+    "file": "AnimatedMorphCube.gltf",
+    "path": "glTF-Sample-Models/2.0/AnimatedMorphCube/glTF/"
+  },
+  {
+    "name": "AnimatedMorphSphere",
+    "file": "AnimatedMorphSphere.gltf",
+    "path": "glTF-Sample-Models/2.0/AnimatedMorphSphere/glTF/"
+  },
+  {
+    "name": "AnimatedTriangle",
+    "file": "AnimatedTriangle.gltf",
+    "path": "glTF-Sample-Models/2.0/AnimatedTriangle/glTF/"
+  },
+  {
+    "name": "Avocado",
+    "file": "Avocado.gltf",
+    "path": "glTF-Sample-Models/2.0/Avocado/glTF/"
+  },
+  {
+    "name": "BarramundiFish",
+    "file": "BarramundiFish.gltf",
+    "path": "glTF-Sample-Models/2.0/BarramundiFish/glTF/"
+  },
+  {
+    "name": "BoomBox",
+    "file": "BoomBox.gltf",
+    "path": "glTF-Sample-Models/2.0/BoomBox/glTF/"
+  },
+  {
+    "name": "Box",
+    "file": "Box.gltf",
+    "path": "glTF-Sample-Models/2.0/Box/glTF/"
+  },
+  {
+    "name": "BoxAnimated",
+    "file": "BoxAnimated.gltf",
+    "path": "glTF-Sample-Models/2.0/BoxAnimated/glTF/"
+  },
+  {
+    "name": "BoxTextured",
+    "file": "BoxTextured.gltf",
+    "path": "glTF-Sample-Models/2.0/BoxTextured/glTF/"
+  },
+  {
+    "name": "BrainStem",
+    "file": "BrainStem.gltf",
+    "path": "glTF-Sample-Models/2.0/BrainStem/glTF/"
+  },
+  {
+    "name": "Buggy",
+    "file": "Buggy.gltf",
+    "path": "glTF-Sample-Models/2.0/Buggy/glTF/"
+  },
+  {
+    "name": "Cameras",
+    "file": "Cameras.gltf",
+    "path": "glTF-Sample-Models/2.0/Cameras/glTF/"
+  },
+  {
+    "name": "CesiumMan",
+    "file": "CesiumMan.gltf",
+    "path": "glTF-Sample-Models/2.0/CesiumMan/glTF/"
+  },
+  {
+    "name": "CesiumMilkTruck",
+    "file": "CesiumMilkTruck.gltf",
+    "path": "glTF-Sample-Models/2.0/CesiumMilkTruck/glTF/"
+  },
+  {
+    "name": "Corset",
+    "file": "Corset.gltf",
+    "path": "glTF-Sample-Models/2.0/Corset/glTF/"
+  },
+  {
+    "name": "Cube",
+    "file": "Cube.gltf",
+    "path": "glTF-Sample-Models/2.0/Cube/glTF/"
+  },
+  {
+    "name": "Duck",
+    "file": "Duck.gltf",
+    "path": "glTF-Sample-Models/2.0/Duck/glTF/"
+  },
+  {
+    "name": "GearboxAssy",
+    "file": "GearboxAssy.gltf",
+    "path": "glTF-Sample-Models/2.0/GearboxAssy/glTF/"
+  },
+  {
+    "name": "Lantern",
+    "file": "Lantern.gltf",
+    "path": "glTF-Sample-Models/2.0/Lantern/glTF/"
+  },
+  {
+    "name": "MetalRoughSpheres",
+    "file": "MetalRoughSpheres.gltf",
+    "path": "glTF-Sample-Models/2.0/MetalRoughSpheres/glTF/"
+  },
+  {
+    "name": "Monster",
+    "file": "Monster.gltf",
+    "path": "glTF-Sample-Models/2.0/Monster/glTF/"
+  },
+  {
+    "name": "NormalTangentTest",
+    "file": "NormalTangentTest.gltf",
+    "path": "glTF-Sample-Models/2.0/NormalTangentTest/glTF/"
+  },
+  {
+    "name": "ReciprocatingSaw",
+    "file": "ReciprocatingSaw.gltf",
+    "path": "glTF-Sample-Models/2.0/ReciprocatingSaw/glTF/"
+  },
+  {
+    "name": "RiggedFigure",
+    "file": "RiggedFigure.gltf",
+    "path": "glTF-Sample-Models/2.0/RiggedFigure/glTF/"
+  },
+  {
+    "name": "RiggedSimple",
+    "file": "RiggedSimple.gltf",
+    "path": "glTF-Sample-Models/2.0/RiggedSimple/glTF/"
+  },
+  {
+    "name": "SciFiHelmet",
+    "file": "SciFiHelmet.gltf",
+    "path": "glTF-Sample-Models/2.0/SciFiHelmet/glTF/"
+  },
+  {
+    "name": "SimpleMeshes",
+    "file": "SimpleMeshes.gltf",
+    "path": "glTF-Sample-Models/2.0/SimpleMeshes/glTF/"
+  },
+  {
+    "name": "SmilingFace",
+    "file": "SmilingFace.gltf",
+    "path": "glTF-Sample-Models/2.0/SmilingFace/glTF/"
+  },
+  {
+    "name": "Suzanne",
+    "file": "Suzanne.gltf",
+    "path": "glTF-Sample-Models/2.0/Suzanne/glTF/"
+  },
+  {
+    "name": "Triangle",
+    "file": "Triangle.gltf",
+    "path": "glTF-Sample-Models/2.0/Triangle/glTF/"
+  },
+  {
+    "name": "TriangleWithoutIndices",
+    "file": "TriangleWithoutIndices.gltf",
+    "path": "glTF-Sample-Models/2.0/TriangleWithoutIndices/glTF/"
+  },
+  {
+    "name": "TwoSidedPlane",
+    "file": "TwoSidedPlane.gltf",
+    "path": "glTF-Sample-Models/2.0/TwoSidedPlane/glTF/"
+  },
+  {
+    "name": "VC",
+    "file": "VC.gltf",
+    "path": "glTF-Sample-Models/2.0/VC/glTF/"
+  },
+  {
+    "name": "WalkingLady",
+    "file": "WalkingLady.gltf",
+    "path": "glTF-Sample-Models/2.0/WalkingLady/glTF/"
+  }
+]
