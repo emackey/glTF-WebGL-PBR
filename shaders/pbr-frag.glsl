@@ -113,7 +113,10 @@ vec3 getNormal()
     vec3 pos_dy = dFdy(v_Position);
     vec3 tex_dx = dFdx(vec3(v_UV, 0.0));
     vec3 tex_dy = dFdy(vec3(v_UV, 0.0));
-    vec3 t = (tex_dy.t * pos_dx - tex_dx.t * pos_dy) / (tex_dx.s * tex_dy.t - tex_dy.s * tex_dx.t);
+
+    float det = 1.0 / (tex_dx.x * tex_dy.y - tex_dx.y * tex_dy.x);
+    vec3 t = det * (pos_dx * tex_dy.y - pos_dy * tex_dx.y);
+    vec3 b = -det * (pos_dy * tex_dx.x - pos_dx * tex_dy.x);
 
 #ifdef HAS_NORMALS
     vec3 ng = normalize(v_Normal);
@@ -122,7 +125,7 @@ vec3 getNormal()
 #endif
 
     t = normalize(t - ng * dot(ng, t));
-    vec3 b = normalize(cross(ng, t));
+    b = normalize(b - ng * dot(ng, b));
     mat3 tbn = mat3(t, b, ng);
 #else // HAS_TANGENTS
     mat3 tbn = v_TBN;
